@@ -1,0 +1,14 @@
+<?php 
+/**
+* File path: WP_ROOT/.maintenance
+* If you need to, add your IP to the $whiteList array.
+* @author Szymon Nowicki 
+* @link https://github.com/eskalacja/wordpress_maintenance_mode GitHub repo
+* @link http://eskalacja.com 
+*/
+
+$whiteList = array();
+
+if (!in_array($_SERVER['REMOTE_ADDR'], $ip)){
+	$upgrading = time(); 
+}
