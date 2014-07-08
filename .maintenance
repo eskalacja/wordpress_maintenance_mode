@@ -6,9 +6,19 @@
 * @link https://github.com/eskalacja/wordpress_maintenance_mode GitHub repo
 * @link http://eskalacja.com 
 */
+session_start();
 
-$whiteList = array();
+$secretWhiteListCode = 'godmode';
+$IpWhiteList = array();
 
-if (!in_array($_SERVER['REMOTE_ADDR'], $ip)){
+if (isset($_GET['mynameis']) && $_GET['mynameis'] === $secretWhiteListCode) {
+    $_SESSION['whitelistedSession'] = true;
+}
+ 
+$whiteListed = false;
+if (in_array($_SERVER['REMOTE_ADDR'], $ip) || (isset($_SESSION['whitelistedSession']) && $_SESSION['whitelistedSession'] === true)) {
+    $whiteListed = true;
+}
+if (!$whitelisted){
 	$upgrading = time(); 
 }
