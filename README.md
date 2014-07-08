@@ -1,4 +1,4 @@
-wordpress_maintenance_mode
+Wordpress Maintenance Mode files
 ==========================
 
-Quick maintenance mode files.
+Just a couple of files to deploy manually a nice maintenance mode for wordpress.
