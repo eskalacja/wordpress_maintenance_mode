@@ -18,7 +18,7 @@ if (!defined('WEBSITE_NAME')) {
     define('WEBSITE_NAME', 'Website name');
 }
 if (!defined('GOOGLE_ANALYTICS_ID')) {
-    define('GOOGLE_ANALYTICS_ID', 'UA-3618915-8');
+    define('GOOGLE_ANALYTICS_ID', '[YOUR GA ID]');
 }
 
 /** sending a proper http code */
