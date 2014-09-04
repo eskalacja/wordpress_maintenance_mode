@@ -9,14 +9,14 @@
 session_start();
 
 $secretWhiteListCode = 'godmode';
-$IpWhiteList = array();
+$IpWhiteList = array('YOUR.IP.NUMBER');
 
 if (isset($_GET['mynameis']) && $_GET['mynameis'] === $secretWhiteListCode) {
     $_SESSION['whitelistedSession'] = true;
 }
  
 $whiteListed = false;
-if (in_array($_SERVER['REMOTE_ADDR'], $ip) || (isset($_SESSION['whitelistedSession']) && $_SESSION['whitelistedSession'] === true)) {
+if (in_array($_SERVER['REMOTE_ADDR'], $IpWhiteList) || (isset($_SESSION['whitelistedSession']) && $_SESSION['whitelistedSession'] === true)) {
     $whiteListed = true;
 }
 if (!$whitelisted){
