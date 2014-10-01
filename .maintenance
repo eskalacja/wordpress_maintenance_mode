@@ -19,6 +19,6 @@ $whiteListed = false;
 if (in_array($_SERVER['REMOTE_ADDR'], $IpWhiteList) || (isset($_SESSION['whitelistedSession']) && $_SESSION['whitelistedSession'] === true)) {
     $whiteListed = true;
 }
-if (!$whitelisted){
+if (!$whiteListed){
 	$upgrading = time(); 
 }
